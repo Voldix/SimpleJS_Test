@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 350px;
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 80%));
+}
+
+.header {
+    font-family: 'Cormorant', serif;
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-shadow: 0 1px 5px rgba(255, 200, 0, 1);
+}
+
+.sub-header {
+    font-family: 'Cormorant', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 1px rgba(255, 200, 0, 1);
+}
+
+.header, .sub-header {
+    text-align: center;
+    color: hsl(0, 0%, 20%);
+}
+
+.answer-item {
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+.answer-item:last-child {
+    margin-bottom: 0;
+}
+
+.every-answer {
+    font-size: 13px;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.question-item {
+    border: 2px solid hsl(0, 0%, 65%);
+    border-radius: 3px;
+    width: 625px;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.test-question {
+    padding: .5rem 1rem;
+    font-size: 16px;
+    border-bottom: 2px solid hsl(0, 0%, 65%);
+    font-weight: bold;
+    background: linear-gradient(to right, hsl(65, 100%, 50%), hsl(54, 100%, 50%));
+    color: hsl(0, 0%, 20%);
+}
+
+.test-question.correct {
+    background: linear-gradient(to right, hsl(140, 100%, 50%), hsl(90, 100%, 50%));
+    box-shadow: 0 0 3px 1px hsl(123, 100%, 50%);
+}
+
+.test-question.incorrect {
+    background: linear-gradient(to right,  hsl(0, 100%, 50%), hsl(0, 100%, 44%));
+    box-shadow: 0 0 3px 1px hsl(0, 100%, 50%);
+}
+
+.answers-container.correct {
+    background: linear-gradient(to right, hsl(0, 0%, 90%), hsl(90, 100%, 50%));
+    box-shadow: 0 0 3px 1px hsl(123, 100%, 50%);
+}
+
+.answers-container.incorrect {
+    background: linear-gradient(to right,  hsl(0, 0%, 90%), hsl(0, 100%, 50%));
+    box-shadow: 0 0 3px 1px hsl(0, 100%, 50%);
+}
+
+.answers-list {
+    padding: 1rem 0;
+    padding-left: 2.5rem
+}
+
+input[type='radio'] {
+    accent-color: hsl(47, 100%, 50%);
+    cursor: pointer;
+}
+
+.answer-item label {
+    cursor: pointer;
+}
+
+.answers-container {
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(54, 100%, 80%)) 
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn-submit {
+    margin-bottom: 1.75rem;
+}
+
+.btn-container button.btn-start, 
+button.btn-submit {
+    padding: .5rem 1rem;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(to right, hsl(65, 100%, 50%), hsl(54, 100%, 50%));
+    color: hsl(0, 0%, 20%);
+    border: 1px solid hsl(0, 0%, 72%);
+    border-radius: 5px;
+}
+
+.btn-container button.btn-start:hover, 
+.btn-container button.btn-start:focus,
+button.btn-submit:hover,
+button.btn-submit:focus
+{
+    background: linear-gradient(to right, hsl(0, 0%, 75%), hsl(0, 0%, 30%));
+    color: hsl(54, 100%, 45%);
+    border: 1px solid hsl(54, 100%, 40%);
+    box-shadow: 0 0 5px 0 hsl(54, 100%, 30%);
+}
+
+footer.footer-container {
+    text-align: center;
+    margin-top: auto;
+    background: grey;
+    border-top: 1px solid hsl(0, 0%, 70%);
+}
+
+.footer-text {
+    font-family: 'Croissant One', cursive;
+    font-size: 14px;
+    padding: 1rem 0;
+    background: linear-gradient(to left,hsl(54, 100%, 40%),hsl(54, 100%, 70%));
+}
+
+form {
+    display: none;
+}
+
+form.show {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-success.swal2-show {
+    border: 5px solid hsl(100, 80%, 25%);
+}
+
+.swal2-title {
+    padding-top: .75rem;
+    font-weight: bold;
+}
+
+.swal2-html-container {
+    margin-top: .25rem;
+    font-weight: bold;
+}
+
+.swal2-confirm.swal2-styled {
+    background-color: hsl(100, 80%, 45%);
+    border: 1px solid hsl(100, 80%, 35%);
+    outline: none;
+}
+
+.swal2-confirm.swal2-styled:hover,
+.swal2-confirm.swal2-styled:focus {
+    background-color: hsl(100, 80%, 35%);
+    box-shadow: 0 0 5px 0 hsl(100, 80%, 25%);
+}
+
+#alert1,
+#alert2,
+#alert3{
+    display: none;
+    font-size: 14px;
+    font-family: 'Cormorant', serif;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 100%);
+    width: 500px;
+}
+
+#alert1 {
+    padding: 1.25rem 1.5rem;
+    border: 5px solid hsl(0, 100%, 40%);
+}
+
+#alert2 {
+    padding: 1rem 5.5rem;
+    padding-top: 0;
+    border: 5px solid hsl(57, 100%, 50%);
+}
+
+#alert3 {
+    padding: 1.2rem 4.5rem;
+    border: 5px solid hsl(124, 96%, 54%);
+}
+
+#alert1.active,
+#alert2.active,
+#alert3.active  {
+    display: block;
+}
+
+.img-container img {
+    width: 250px;
+    height: 150px;
+}
+
+.img-container-2 img {
+    width: 150px;
+    height: 175px;
+}
+
+.img-container-3 img {
+    width: 250px;
+    height: 150px;
+}
+
+.alert-title {
+    margin: 0;
+    text-shadow: 0 1px 2px hsla(0, 100%, 40%, 1);
+}
+
+.alert2-title {
+    margin: 0;
+    text-shadow: 0 1px 2px hsl(57, 100%, 50%);
+}
+
+.alert3-title {
+    margin: 0;
+    text-shadow: 0 1px 2px hsl(124, 96%, 54%);
+}
+
+.alert-sub,
+.alert2-sub,
+.alert3-sub {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.alert-sub {
+    text-shadow: 0 1px 1px hsla(0, 100%, 40%, 1);
+}
+
+.alert2-sub {
+    text-shadow: 0 1px 1px hsl(57, 100%, 50%);
+}
+
+.alert3-sub {
+    text-shadow: 0 1px 1px hsl(124, 96%, 54%);
+}
+
+#score,
+#score2,
+#score3 {
+    font-family: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1rem 0;
+}
+
+.alert-btn {
+    font-family: inherit;
+    font-size: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    font-weight: bold;
+    padding: .25rem .75rem;
+    border-radius: .3em;
+    cursor: pointer;
+    color: white;
+    width: 100px;
+}
+
+.alert-btn.close,
+.alert-btn.restart {
+    background-color: hsl(0, 100%, 40%);
+    border: 1px solid hsl(0, 100%, 30%);
+}
+
+.alert-btn.close2,
+.alert-btn.restart2 {
+    background-color: hsl(57, 100%, 50%);
+    border: 1px solid hsl(57, 100%, 45%);
+    color: black;
+}
+
+.alert-btn.close3,
+.alert-btn.restart3 {
+    background-color:  hsl(124, 96%, 40%);
+    border: 1px solid hsl(124, 96%, 30%);
+} 
+
+
+.alert-btn.restart,
+.alert-btn.restart2,
+.alert-btn.restart3 {
+    margin-left: 1rem;
+}
+
+.alert-btn.close:hover,
+.alert-btn.close:focus,
+.alert-btn.restart:hover,
+.alert-btn.restart:focus {
+    background-color: hsl(0, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(0, 100%, 20%);
+}
+
+.alert-btn.close2:hover,
+.alert-btn.close2:focus,
+.alert-btn.restart2:hover,
+.alert-btn.restart2:focus {
+    background-color: hsl(57, 100%, 45%);
+    box-shadow: 0 0 5px 0 hsl(57, 100%, 40%);
+    color: white;
+}
+
+.alert-btn.close3:hover,
+.alert-btn.close3:focus,
+.alert-btn.restart3:hover,
+.alert-btn.restart3:focus {
+    background-color:  hsl(124, 96%, 30%);
+    box-shadow: 0 0 5px 0 hsl(124, 96%, 25%);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+#overlay.active {
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        line-height: 1;
+        padding-top: 1rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 60px;
+        margin-bottom: .5rem;
+    }
+    .sub-header {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 22px;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-container button.btn-start, 
+    button.btn-submit {
+        padding: .4rem .9rem;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        padding: .75rem 0;
+    }
+
+    .every-answer {
+        font-size: 11.5px;
+    }
+
+    .answer-item {
+        margin-bottom: .35rem;
+    }
+
+    .question-item {
+        width: 340px;
+    }
+
+    .question-item {
+        width: 540px;
+    }
+
+    .test-question {
+        font-size: 14.5px;
+    }
+
+    .answers-list {
+        padding: 1rem 1.5rem;
+    }
+
+    #alert1,
+    #alert2,
+    #alert3{
+        width: 450px;
+        font-size: 12px;
+    }
+
+    #score,
+    #score2,
+    #score3 {
+        font-size: 17px;
+        margin: .85rem 0;
+    }
+
+    .alert-btn {
+        font-size: 19px;
+        letter-spacing: 1px;
+        padding: .4rem;
+        width: 95px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .header {
+        line-height: 1;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 55px;
+        margin-bottom: .5rem;
+    }
+
+    .sub-header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 20px;
+        margin-bottom: 1.25rem;
+    }
+
+    .btn-container button.btn-start, 
+    button.btn-submit {
+        padding: .3rem .8rem;
+        font-size: 18px;
+        font-weight: 600;
+}
+
+    .footer-text {
+        font-size: 12px;
+        padding: .5rem 0;
+    }
+
+    .every-answer {
+        font-size: 10px;
+    }
+
+    .answer-item {
+        margin-bottom: .25rem;
+    }
+
+    .question-item {
+        width: 340px;
+    }
+
+    .test-question {
+        font-size: 13px;
+    }
+
+    .answers-list {
+        padding: .5rem 1rem;
+    }
+
+    #alert1,
+    #alert2,
+    #alert3{
+        font-size: 10px;
+        width: 320px;
+        height: 320px;
+    }
+
+    #score,
+    #score2,
+    #score3 {
+        font-size: 16px;
+        margin: .75rem 0;
+    }
+
+    .alert-btn {
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding: .35rem;
+        width: 90px;
+    }
+    
+    #alert2,
+    #alert3 {
+        padding: .25rem 2rem;
+    }
+
+    .img-container-3 {
+        margin-bottom: 1rem;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-success.swal2-show {
+        font-size: 14px;
+    }
+
+    .swal2-confirm.swal2-styled {
+        padding: .35rem .70rem;
+    }
+}
+

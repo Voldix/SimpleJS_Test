@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Simple JS Test</title>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header class="header-container">
+        <div class="header">Simple JavaScript Test</div>
+        <div class="sub-header">Check your knowledge in JavaScript fundamentals</div>
+        <div class="btn-container">
+            <button class="btn-start">Start</button>
+        </div>
+    </header>
+    <main>
+        <div id="alert1">
+            <div class="img-container">
+                <img src="./img/badtr.png">
+            </div>
+            <h1 class="alert-title">No-No, that will not do at all...</h1>
+            <h2 class="alert-sub">Come on, you can do better, I know!</h2>
+            <div id="score"></div>
+            <div class="alert-btn-container">
+                <button id="alert1-btn-close" class="alert-btn close">Mistakes</button>
+                <button id="alert1-btn-restart" class="alert-btn restart">Finish</button>
+            </div>
+        </div>
+        <div id="alert2">
+            <div class="img-container-2">
+                <img src="./img/sosotr.png">
+            </div>
+            <h1 class="alert2-title">Not bad...</h1>
+            <h2 class="alert2-sub">I believe you know more!</h2>
+            <div id="score2"></div>
+            <div class="alert-btn-container">
+                <button id="alert2-btn-close" class="alert-btn close2">Mistakes</button>
+                <button id="alert2-btn-restart" class="alert-btn restart2">Finish</button>
+            </div>
+        </div>
+        <div id="alert3">
+            <div class="img-container-3">
+                <img src="./img/goodtr.png">
+            </div>
+            <h1 class="alert3-title">Sooo good!</h1>
+            <h2 class="alert3-sub">Аre you a programmer?)</h2>
+            <div id="score3"></div>
+            <div class="alert-btn-container">
+                <button id="alert3-btn-close" class="alert-btn close3">Mistakes</button>
+                <button id="alert3-btn-restart" class="alert-btn restart3">Finish</button>
+            </div>
+        </div>
+        <form id="quiz-form">
+            <ol class="question-container">
+                <li class="question-item">
+                    <div class="test-question">1. What does this code return? Boolean (10 > 9)</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-1" value="false">
+                                    <code class="every-answer">1</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-1" value="true">
+                                    <code class="every-answer">true</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-1" value="false">
+                                    <code class="every-answer">NaN</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-1" value="false">
+                                    <code class="every-answer">false</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">2. What kind of code will change the content of the HTML element?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-2" value="true">
+                                    <code
+                                        class="every-answer">document.getElementById("demo").innerHTML = "Hello World!";</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-2" value="false">
+                                    <code class="every-answer">$demo.innerHTML = "Hello World!";</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-2" value="false">
+                                    <code
+                                        class="every-answer">document.getElementByName("p").innerHTML = "Hello World!";</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-2" value="false">
+                                    <code
+                                        class="every-answer">document.getElementByName("p").innerHTML = "Hello World!";</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-2" value="false">
+                                    <code class="every-answer"> #demo.text = "Hello World!";</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">3. How can you display the message "Hello World!" using JS?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-3" value="false">
+                                    <code class="every-answer">msgBox('Hello World');</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-3" value="true">
+                                    <code class="every-answer">alert('Hello World');</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-3" value="false">
+                                    <code class="every-answer">alertBox('Hello World');</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-3" value="false">
+                                    <code class="every-answer">console.('Hello World');</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">4. How to start the FOR cycle?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-4" value="false">
+                                    <code class="every-answer">for i = 1 to 10</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-4" value="false">
+                                    <code class="every-answer">for (i <= 10; i++)</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-4" value="false">
+                                    <code class="every-answer">for (i <= 10; i++)</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-4" value="true">
+                                    <code class="every-answer">for (i = 0; i <= 10; i++)</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">5. How is the number 3.14 rounded to the nearest integer?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-5" value="false">
+                                    <code class="every-answer">Math.rnd(3.14);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-5" value="false">
+                                    <code class="every-answer">rnd(3.14);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-5" value="true">
+                                    <code class="every-answer">Math.round(3.14);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-5" value="false">
+                                    <code class="every-answer">MathRound(3.14);</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">6. What event happens when a user clicks on an HTML element?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-6" value="false">
+                                    <code class="every-answer">onchange</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-6" value="false">
+                                    <code class="every-answer">onmouseover</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-6" value="false">
+                                    <code class="every-answer">onmouseclick</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-6" value="true">
+                                    <code class="every-answer">onclick</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">7. How to create an array in JavaScript?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-7" value="false">
+                                    <code class="every-answer">let colors = '1', '2', '3'</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-7" value="false">
+                                    <code class="every-answer">let colors = (1:'name',2:'age)</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-7" value="true">
+                                    <code class="every-answer">let colors = ['yellow', 'purple', 'blue']</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-7" value="false">
+                                    <code class="every-answer">let colors = {yellow, purple, blue}</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">8. Is JavaScript case-sensitive?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-8" value="true">
+                                    <code class="every-answer">Yes</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-8" value="false">
+                                    <code class="every-answer">No</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">9. What method opens a window in JavaScript?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-9" value="false">
+                                    <code class="every-answer">myWindow = open.window("https://wm-school.ru");</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-9" value="false">
+                                    <code class="every-answer">myWindow = New window("https://wm-school.ru");</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-9" value="false">
+                                    <code class="every-answer">myWindow = window.new("https://wm-school.ru");</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-9" value="true">
+                                    <code class="every-answer">myWindow = window.open("https://wm-school.ru");</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">10. How to find the largest of two numbers?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-10" value="false">
+                                    <code class="every-answer">top(x, y);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-10" value="false">
+                                    <code class="every-answer">Math.ceil(x, y);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-10" value="true">
+                                    <code class="every-answer">Math.max(x, y);</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-10" value="false">
+                                    <code class="every-answer">ceil(x, y);</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">11. What is the correct way to comment in JavaScript?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-11" value="true">
+                                    <code class="every-answer">//</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-11" value="false">
+                                    <code class="every-answer"><-- --></code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-11" value="false">
+                                    <code class="every-answer"><< >></code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">12. In what section can JavaScript be inserted?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-12" value="true">
+                                    <code class="every-answer">head and body</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-12" value="false">
+                                    <code class="every-answer">only head</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-12" value="false">
+                                    <code class="every-answer">only body</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-12" value="false">
+                                    <code class="every-answer">there is no correct answer</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">13. How to start writing a function?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-13" value="false">
+                                    <code class="every-answer">function = New MyFunction();</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-13" value="true">
+                                    <code class="every-answer">function MyFunction();</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-13" value="false">
+                                    <code class="every-answer">function = MyFunction();</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-13" value="false">
+                                    <code class="every-answer">function:MyFunction();</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">14. How to call "myFunction"?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-14" value="false">
+                                    <code class="every-answer">call myFunction();</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-14" value="false">
+                                    <code class="every-answer">call function myFunction();</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-14" value="true">
+                                    <code class="every-answer">myFunction();</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">15. What does the document.getElementById(“p1”).innerHTML = “hi!”; do?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-15" value="false">
+                                    <code class="every-answer">looks for an element in HTML</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-15" value="false">
+                                    <code class="every-answer">deletes an element in HTML</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-15" value="true">
+                                    <code
+                                        class="every-answer">looks for an element in HTML and changes the text</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-1" value="false">
+                                    <code
+                                        class="every-answer">looks for an element in HTML and deletes the text</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">16. The correct option is for IF, where "i" should be different from 2:</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-16" value="true">
+                                    <code class="every-answer">if (i != 2)</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-16" value="false">
+                                    <code class="every-answer">if i <> 2</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-16" value="false">
+                                    <code class="every-answer">if (i <> 2)</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-16" value="false">
+                                    <code class="every-answer">if i != 2 then</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">17. What operator can be used to find the remainder of the division?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-17" value="false">
+                                    <code class="every-answer">?</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-17" value="false">
+                                    <code class="every-answer">--</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-17" value="false">
+                                    <code class="every-answer">**</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-17" value="true">
+                                    <code class="every-answer">%</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">18. How do I convert the entered string to a number?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-18" value="false">
+                                    <code class="every-answer">let a = (Number)(prompt(""));</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-18" value="false">
+                                    <code class="every-answer">let a = prompt("");</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-18" value="true">
+                                    <code class="every-answer">let a = Number(prompt(""));</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-18" value="false">
+                                    <code class="every-answer">let a = (Number)prompt("");</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">19. What is it called when a function calls itself?</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-19" value="false">
+                                    <code class="every-answer">Inception</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-19" value="false">
+                                    <code class="every-answer">Arrow Function</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-19" value="false">
+                                    <code class="every-answer">Self-Referential</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-19" value="true">
+                                    <code class="every-answer">Recursion</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">20. What does this code return? (<code>0 || '' || false || "Hi"</code>)</div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-20" value="false">
+                                    <code class="every-answer">0</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-20" value="true">
+                                    <code class="every-answer">"Hi"</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-20" value="false">
+                                    <code class="every-answer">false</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer20" value="false">
+                                    <code class="every-answer">''</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="question-item">
+                    <div class="test-question">21. How to access the value of the "data-count" data attribute in JavaScript?
+                    </div>
+                    <div class="answers-container">
+                        <ol class="answers-list">
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-21" value="true">
+                                    <code class="every-answer"> element.dataset.count</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-21" value="false">
+                                    <code class="every-answer">element.dataAttribute.count</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-21" value="false">
+                                    <code class="every-answer">element.dataset.dataCount</code>
+                                </label>
+                            </li>
+                            <li class="answer-item">
+                                <label>
+                                    <input class="answer" type="radio" name="answer-21" value="false">
+                                    <code class="every-answer">element.dataCount</code>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+            <div class="btn-container">
+                <button type="submit" class="btn-submit">Check</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer-container">
+        <div class="footer-text">
+            &#169;2023 - Developed for portfolio by Vladi Akhrem
+        </div>
+    </footer>
+
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>
